@@ -1,4 +1,4 @@
-# S-UI
+# S-UI (中文脚本汉化版)
 **An Advanced Web Panel • Built on SagerNet/Sing-Box**
 
 ![](https://img.shields.io/github/v/release/alireza0/s-ui.svg)
