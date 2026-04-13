@@ -58,9 +58,14 @@
 
 ## Install & Upgrade to Latest Version
 
-### Linux/macOS
+### Linux/macOS (English)
 ```sh
 bash <(curl -Ls https://raw.githubusercontent.com/alireza0/s-ui/master/install.sh)
+```
+
+### Linux/macOS (中文界面)
+```sh
+bash <(curl -Ls https://raw.githubusercontent.com/2190297373/s-ui/main/install.sh)
 ```
 
 ### Windows
