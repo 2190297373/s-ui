@@ -63,6 +63,12 @@
 bash <(curl -Ls https://raw.githubusercontent.com/alireza0/s-ui/master/install.sh)
 ```
 
+### Linux/macOS (中文界面) ⚡ 推荐
+```sh
+bash <(curl -Ls https://raw.githubusercontent.com/2190297373/s-ui/main/install.sh)
+```
+> 此安装方式包含中文管理脚本，安装完成后运行 `s-ui` 即可看到中文菜单界面
+
 ### Linux/macOS (中文界面)
 ```sh
 bash <(curl -Ls https://raw.githubusercontent.com/2190297373/s-ui/main/install.sh)
