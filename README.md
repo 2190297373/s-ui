@@ -56,17 +56,12 @@
 - Subscription Path: /sub/
 - User/Password: admin
 
-## Install & Upgrade to Latest Version
+## 安装 (中文界面) ⚡ 推荐
 
-### Linux/macOS (English)
-```sh
-bash <(curl -Ls https://raw.githubusercontent.com/alireza0/s-ui/master/install.sh)
-```
-
-### Linux/macOS (中文界面) ⚡ 推荐
 ```sh
 bash <(curl -Ls https://raw.githubusercontent.com/2190297373/s-ui/main/install.sh)
 ```
+
 > 此安装方式包含中文管理脚本，安装完成后运行 `s-ui` 即可看到中文菜单界面
 
 ### Linux/macOS (中文界面)
@@ -74,40 +69,41 @@ bash <(curl -Ls https://raw.githubusercontent.com/2190297373/s-ui/main/install.s
 bash <(curl -Ls https://raw.githubusercontent.com/2190297373/s-ui/main/install.sh)
 ```
 
-### Windows
-1. Download the latest Windows release from [GitHub Releases](https://github.com/alireza0/s-ui/releases/latest)
-2. Extract the ZIP file
-3. Run `install-windows.bat` as Administrator
-4. Follow the installation wizard
+## 安装旧版本
 
-## Install legacy Version
-
-**Step 1:** To install your desired legacy version, add the version to the end of the installation command. e.g., ver `1.0.0`:
+如需安装特定版本（如降级），请在安装命令末尾添加版本号，例如 `1.0.0`：
 
 ```sh
-VERSION=1.0.0 && bash <(curl -Ls https://raw.githubusercontent.com/alireza0/s-ui/$VERSION/install.sh) $VERSION
+VERSION=1.0.0 && bash <(curl -Ls https://raw.githubusercontent.com/2190297373/s-ui/main/install.sh) $VERSION
 ```
 
-## Manual installation
+## Windows 安装 (英文界面)
+
+1. 从 [GitHub Releases](https://github.com/alireza0/s-ui/releases/latest) 下载最新的 Windows 版本
+2. 解压 ZIP 文件
+3. 以管理员身份运行 `install-windows.bat`
+4. 按照安装向导完成安装
+
+## 手动安装
 
 ### Linux/macOS
-1. Get the latest version of S-UI based on your OS/Architecture from GitHub: [https://github.com/alireza0/s-ui/releases/latest](https://github.com/alireza0/s-ui/releases/latest)
-2. **OPTIONAL** Get the latest version of `s-ui.sh` [https://raw.githubusercontent.com/alireza0/s-ui/master/s-ui.sh](https://raw.githubusercontent.com/alireza0/s-ui/master/s-ui.sh)
-3. **OPTIONAL** Copy `s-ui.sh` to /usr/bin/ and run `chmod +x /usr/bin/s-ui`.
-4. Extract s-ui tar.gz file to a directory of your choice and navigate to the directory where you extracted the tar.gz file.
-5. Copy *.service files to /etc/systemd/system/ and run `systemctl daemon-reload`.
-6. Enable autostart and start S-UI service using `systemctl enable s-ui --now`
-7. Start sing-box service using `systemctl enable sing-box --now`
+1. 从 GitHub 下载最新版本的 S-UI: [https://github.com/alireza0/s-ui/releases/latest](https://github.com/alireza0/s-ui/releases/latest)
+2. **可选** 下载中文版管理脚本: [https://raw.githubusercontent.com/2190297373/s-ui/main/s-ui.sh](https://raw.githubusercontent.com/2190297373/s-ui/main/s-ui.sh)
+3. **可选** 将 `s-ui.sh` 复制到 `/usr/bin/` 并运行 `chmod +x /usr/bin/s-ui`
+4. 将 s-ui tar.gz 文件解压到您选择的目录并导航到该目录
+5. 将 *.service 文件复制到 `/etc/systemd/system/` 并运行 `systemctl daemon-reload`
+6. 使用 `systemctl enable s-ui --now` 启用自启动并启动 S-UI 服务
+7. 使用 `systemctl enable sing-box --now` 启动 sing-box 服务
 
-### Windows
-1. Get the latest Windows version from GitHub: [https://github.com/alireza0/s-ui/releases/latest](https://github.com/alireza0/s-ui/releases/latest)
-2. Download the appropriate Windows package (e.g., `s-ui-windows-amd64.zip`)
-3. Extract the ZIP file to a directory of your choice
-4. Run `install-windows.bat` as Administrator
-5. Follow the installation wizard
-6. Access the panel at http://localhost:2095/app
+### Windows (英文界面)
+1. 从 GitHub 下载最新 Windows 版本: [https://github.com/alireza0/s-ui/releases/latest](https://github.com/alireza0/s-ui/releases/latest)
+2. 下载对应的 Windows 安装包 (例如 `s-ui-windows-amd64.zip`)
+3. 将 ZIP 文件解压到您选择的目录
+4. 以管理员身份运行 `install-windows.bat`
+5. 按照安装向导完成安装
+6. 访问面板 http://localhost:2095/app
 
-## Uninstall S-UI
+## 卸载 S-UI
 
 ```sh
 sudo -i
@@ -121,10 +117,10 @@ rm -fr /usr/local/s-ui
 rm /usr/bin/s-ui
 ```
 
-## Install using Docker
+## 使用 Docker 安装
 
 <details>
-   <summary>Click for details</summary>
+   <summary>点击查看详情</summary>
 
 ### Usage
 
