@@ -30,6 +30,7 @@
 | Subscription Link (link/json/clash + info)| :heavy_check_mark: |
 | Dark/Light Theme                       | :heavy_check_mark: |
 | API Interface                          | :heavy_check_mark: |
+| Chinese Management Script               | :heavy_check_mark: |
 
 ## Supported Platforms
 | Platform | Architecture | Status |
@@ -220,6 +221,77 @@ To run backend (from root folder of repository):
 - Subscription service with ability to add external links and subscription
 - HTTPS for secure access to the web panel and subscription service (self-provided domain + SSL certificate)
 - Dark/Light theme
+
+## 中文管理脚本 (s-ui.sh)
+
+本项目提供中文界面的管理脚本 `s-ui.sh`，方便中文用户管理 S-UI 面板。
+
+### 功能特性
+
+| 编号 | 功能 | 说明 |
+|------|------|------|
+| 0 | 退出 | 退出管理菜单 |
+| 1 | 安装 | 安装 s-ui (全新安装) |
+| 2 | 更新 | 更新 s-ui 到最新版本 |
+| 3 | 自定义版本 | 安装特定版本 (例如降级) |
+| 4 | 卸载 | 完全卸载 s-ui |
+| 5 | 重置管理员凭据为默认 | 忘记密码时使用，恢复默认账号密码 |
+| 6 | 设置管理员凭据 | 修改面板登录的账号和密码 |
+| 7 | 查看管理员凭据 | 查看当前的账号密码 |
+| 8 | 重置面板设置 | 将面板设置恢复出厂 |
+| 9 | 设置面板设置 | 修改面板端口、路径等 |
+| 10 | 查看面板设置 | 查看当前面板配置信息 |
+| 11 | 启动 s-ui | 启动服务 |
+| 12 | 停止 s-ui | 停止服务 |
+| 13 | 重启 s-ui | 重启服务 (配置修改后常用) |
+| 14 | 检查状态 | 查看服务是否运行正常 |
+| 15 | 查看日志 | 查看运行日志 (排错用) |
+| 16 | 开启开机自启 | 设置随系统启动 |
+| 17 | 关闭开机自启 | 取消随系统启动 |
+| 18 | 开启/关闭 BBR | 优化网络拥堵控制算法 |
+| 19 | SSL 证书管理 | 申请 Let's Encrypt 证书 (HTTP 验证) |
+| 20 | Cloudflare SSL 证书 | 申请 Cloudflare 证书 (DNS 验证) |
+
+### 使用方法
+
+```bash
+# 安装后自动获得中文管理脚本
+# 或手动下载
+wget -O /usr/bin/s-ui https://raw.githubusercontent.com/2190297373/s-ui/main/s-ui.sh
+chmod +x /usr/bin/s-ui
+
+# 运行管理脚本
+s-ui
+
+# 命令行模式 (无需交互)
+s-ui start      # 启动
+s-ui stop       # 停止
+s-ui restart    # 重启
+s-ui status     # 查看状态
+s-ui enable     # 开启开机自启
+s-ui disable    # 关闭开机自启
+s-ui log        # 查看日志
+s-ui update     # 更新
+s-ui uninstall  # 卸载
+```
+
+### 界面预览
+
+```
+  S-UI 管理脚本
+————————————————————————————
+  0. 退出
+————————————————————————————
+  1. 安装
+  2. 更新
+  3. 自定义版本
+  4. 卸载
+————————————————————————————
+  5. 重置管理员凭据为默认
+  6. 设置管理员凭据
+  7. 查看管理员凭据
+...
+```
 
 ## Environment Variables
 
