@@ -180,7 +180,12 @@ install_s-ui() {
     /usr/local/s-ui/sui uri
     echo -e "${plain}"
     echo -e ""
-    s-ui help
+    
+    # 下载中文版 s-ui.sh 管理脚本
+    echo -e "${yellow}正在下载中文版管理脚本...${plain}"
+    wget -O /usr/bin/s-ui -N --no-check-certificate https://raw.githubusercontent.com/2190297373/s-ui/main/s-ui.sh
+    chmod +x /usr/bin/s-ui
+    echo -e "${green}中文版管理脚本下载完成！${plain}"
 }
 
 echo -e "${green}正在执行...${plain}"
